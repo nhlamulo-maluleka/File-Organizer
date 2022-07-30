@@ -9,4 +9,4 @@
 - Music
 - Videos
 - Documents
-- Applications - (This folder will hold all the applications installed by the user so that the downloads folder is always kept clean)
+- Applications - (This folder will hold all the applications downloaded by the user so that the downloads folder is always kept clean)
