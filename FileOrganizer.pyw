@@ -1,10 +1,8 @@
 import pathlib
-import mimetypes
 import time
 import calendar
 import os
 
-mimetype = mimetypes.MimeTypes()
 ltime = time.localtime()
 
 # File Directors
@@ -35,28 +33,33 @@ def createDir(path, year, pathName):
 
 def moveFile(file):
     fileExtension = file.name.split(".")[-1]
-    day = ltime.tm_mday
+    # day = ltime.tm_mday
     year = ltime.tm_year
     month = calendar.month_name[ltime.tm_mon]
     # newFileName = f"{year}_{month[:3]}_{day}_{file.name}"
     newFileName = f"{file.name}"
 
+    # Places a file in the Pictures Folder
     if fileExtension in images:
         createDir(directories[1], year, month)
         os.replace(file, f"{directories[1]}\\{year}\\{month}\\{newFileName}")
 
+    # Places a file in the Videos Folder
     elif fileExtension in videos:
         createDir(directories[2], year, month)
         os.replace(file, f"{directories[2]}\\{year}\\{month}\\{newFileName}")
 
+    # Places a file in the Music Folder
     elif fileExtension in audio:
         createDir(directories[3], year, month)
         os.replace(file, f"{directories[3]}\\{year}\\{month}\\{newFileName}")
 
+    # Places a file in the Documents Folder
     elif fileExtension in documents:
         createDir(directories[4], year, month)
         os.replace(file, f"{directories[4]}\\{year}\\{month}\\{newFileName}")
 
+    # Places a file in the Applications Folder
     elif fileExtension in applications:
         createDir(directories[5], year, month)
         os.replace(file, f"{directories[5]}\\{year}\\{month}\\{newFileName}")
