@@ -1,15 +1,21 @@
-# File-Organizer
+# File Organizer
 
 > A file organizer application for automatically organizing your files according to their respective folders
 
-#### The Following Folders are constantly being monitored:
+### NB: NOT ALL EXTENSIONS ARE COVERED BUT YOU CAN ADD YOUR OWN EXTENSIONS IN THE JSON FILE EXTENSIONS AND REMEMBER TO RESTART THE APPLICATION AFTER MAKING CHANGES!
 
-- Downloads
-- Pictures
-- Music
-- Videos
-- Documents
-- Applications - (This folder will hold all the applications downloaded by the user so that the downloads folder is always kept clean)
+### ***NB: DO NOT CHANGE THE STRUCTURE OF THE JSON FILE AS THAT WILL COMPROMISE THE FUNCTIONALITY OF THE APPLICATION!***
 
-### NB: The app does not show any gui nor console when you run it, but works in the background.
-### NB: NOT ALL EXTENSIONS ARE COVERED IN THE FILE EXTENSIONS LIST!!
+#### The Following directories are the default directories from the [COMPUTER_USERPROFILE]:
+
+* Downloads
+* Pictures
+* Music
+* Videos
+* Documents
+
+> This is an extra directory added for the purpose of holding applications [YOU ARE WELCOME TO REMOVE IT IF YOU NOT NEED IT]
+
+* Applications
+
+### NB: The app does not show any ***GUI*** nor ***CONSOLE*** output when you run it!
