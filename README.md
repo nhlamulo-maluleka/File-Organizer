@@ -18,4 +18,4 @@
 
 * Applications
 
-### NB: The app does not show any ***GUI*** nor ***CONSOLE*** output when you run it!
+### NB: The app does not show any output when you run it!
