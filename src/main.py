@@ -7,7 +7,6 @@ from FileOrganizer import directories, moveFile, visitDirectory
 
 # For each directory, check if there are files in that directory,
 # And if they are files, move them to their rightful directories,
-# But don't touch any folders in the directory.
 
 if __name__ == "__main__":
     while True:
