@@ -53,13 +53,16 @@ def getTargetDir(extension):
     # Places a file in the Applications Folder
     elif extension in applications:
         return visitDirectory("Applications")
+    
+    else:
+        return None
 
 # This function moves the files to their respective directories
 def moveFile(file):
     fileExtension = str(file.name).split(".")[-1]
-    year = localtime().tm_year
     month = calendar.month_name[localtime().tm_mon]
     newFileName = f"{file.name}"
     targetDir = getTargetDir(fileExtension)
 
-    replaceFile(file, targetDir, year, month, newFileName)
+    if targetDir != None:
+        replaceFile(file, targetDir, localtime().tm_year, month, newFileName)
