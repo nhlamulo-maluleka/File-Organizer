@@ -14,7 +14,7 @@
 * Videos
 * Documents
 
-> This is an extra directory added for the purpose of holding applications [YOU ARE WELCOME TO REMOVE IT IF YOU NOT NEED IT]
+> This [Directory] below is an extra directory added for the purpose of holding applications [YOU ARE WELCOME TO REMOVE IT IF YOU NOT NEED IT]
 
 * Applications
 

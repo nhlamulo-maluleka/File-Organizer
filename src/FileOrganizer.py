@@ -29,8 +29,11 @@ def createDir(targetDir, year, pathName):
 
 # Placing the file in the correct directory
 def replaceFile(file, targetDir, year, month, newFileName):
-    createDir(targetDir, year, month)
-    os.replace(file, f"{targetDir}\\{year}\\{month}\\{newFileName}")
+    try:
+        createDir(targetDir, year, month)
+        os.replace(file, f"{targetDir}\\{year}\\{month}\\{newFileName}")
+    except:
+        pass
 
 # Get Target directory
 def getTargetDir(extension):

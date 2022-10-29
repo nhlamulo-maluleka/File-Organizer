@@ -21,4 +21,4 @@ if __name__ == "__main__":
                         moveFile(file)
                     # else
                     #   It is a folder
-        sleep(3)
+        sleep(1)
