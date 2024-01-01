@@ -23,15 +23,15 @@ def visitDirectory(dirName):
     return os.path.join(os.environ['USERPROFILE'], dirName)
 
 # This function checks if a [destination directory] exists and if not, it creates it!
-def createDir(targetDir, year, pathName):
-    if not pathlib.Path(f"{targetDir}\\{year}\\{pathName}").exists():
-        pathlib.Path(f"{targetDir}\\{year}\\{pathName}").mkdir(exist_ok=True, parents=True)
+def createDir(targetDir, year):
+    if not pathlib.Path(f"{targetDir}\\{year}").exists():
+        pathlib.Path(f"{targetDir}\\{year}").mkdir(exist_ok=True, parents=True)
 
 # Placing the file in the correct directory
-def replaceFile(file, targetDir, year, month, newFileName):
+def replaceFile(file, targetDir, year, newFileName):
     try:
-        createDir(targetDir, year, month)
-        os.replace(file, f"{targetDir}\\{year}\\{month}\\{newFileName}")
+        createDir(targetDir, year)
+        os.replace(file, f"{targetDir}\\{year}\\{newFileName}")
     except:
         pass
 
@@ -62,10 +62,9 @@ def getTargetDir(extension):
 
 # This function moves the files to their respective directories
 def moveFile(file):
-    fileExtension = str(file.name).split(".")[-1]
-    month = calendar.month_name[localtime().tm_mon]
+    fileExtension = str(file.name).split(".")[-1].lower()
     newFileName = f"{file.name}"
     targetDir = getTargetDir(fileExtension)
 
     if targetDir != None:
-        replaceFile(file, targetDir, localtime().tm_year, month, newFileName)
+        replaceFile(file, targetDir, localtime().tm_year, newFileName)
